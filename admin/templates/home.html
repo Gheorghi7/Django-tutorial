@@ -1,0 +1,15 @@
+{%  extends "base.html" %}
+
+{% block content %}
+    <h1>Hello Home page</h1>
+    <p>{{request.user|capfirst|upper}}</p>
+    <p>{{ my_text }}, {{my_num}}</p>
+            <ul>
+        {% for x in my_list%}
+                <li>{{forloop.counter}} - {{x|add:22}}</li>
+        {% endfor %}
+            </ul>
+
+    <p>♥</p>
+{% endblock %}
+
